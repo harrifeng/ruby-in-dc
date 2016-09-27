@@ -1,0 +1,29 @@
+version: '2'
+services:
+  db:
+    image: mysql:5.6
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    volumes:
+      - mysql_vol:/var/lib/mysql
+  web:
+    hostname: opts-wc
+    image: harrifeng/opts
+    command: /usr/sbin/sshd -D
+    volumes:
+      - root_vol:/root
+    ports:
+      - "3000:3000"
+      - "7000:7000"
+      - "8000:8000"
+      - "8888:8888"
+      - "9000:9000"
+    depends_on:
+      - db
+    environment:
+      - DB_HOST=db
+volumes:
+  mysql_vol:
+    external: true
+  root_vol:
+    external: true
