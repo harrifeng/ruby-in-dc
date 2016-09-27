@@ -14,6 +14,7 @@ silversearcher-ag \
 curl \
 mysql-client \
 libmysqlclient-dev \
+libsqlite3-dev \
 openssh-server
 
 RUN mkdir /var/run/sshd
