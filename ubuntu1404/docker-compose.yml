@@ -1,0 +1,17 @@
+version: '2'
+services:
+  web:
+    hostname: ubuntu1404-wc
+    image: ubuntu:14.04
+    command: /bin/sh -c "while true; do ping 127.0.0.1; done"
+    volumes:
+      - root_vol:/root
+    ports:
+      - "3000:3000"
+      - "7000:7000"
+      - "8000:8000"
+      - "8080:8080"
+      - "9000:9000"
+volumes:
+  root_vol:
+    external: true
