@@ -3,7 +3,7 @@ services:
   web:
     hostname: ubuntu1404-wc
     image: ubuntu:14.04
-    command: /bin/sh -c "while true; do ping 127.0.0.1; done"
+    command: /bin/sh -c "while true; do pwd; sleep 5; done"
     volumes:
       - root_vol:/root
     ports:
