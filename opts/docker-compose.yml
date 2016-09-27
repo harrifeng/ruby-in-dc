@@ -13,6 +13,7 @@ services:
     volumes:
       - root_vol:/root
     ports:
+      - "22:2222"
       - "3000:3000"
       - "7000:7000"
       - "8000:8000"
