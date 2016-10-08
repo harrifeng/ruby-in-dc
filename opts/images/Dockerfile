@@ -1,5 +1,5 @@
-# image name: harrifeng/opts
-FROM ubuntu:14.04
+# image name: harrifeng/vwops
+FROM ubuntu:16.04
 RUN apt-get update && \
 DEBIAN_FRONTEND=noninteractive apt-get -y install \
 gcc \

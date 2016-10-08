@@ -7,8 +7,8 @@ services:
     volumes:
       - mysql_vol:/var/lib/mysql
   web:
-    hostname: opts-wc
-    image: harrifeng/opts
+    hostname: vwops-wc
+    image: harrifeng/vwops
     command: /usr/sbin/sshd -D
     volumes:
       - root_vol:/root
