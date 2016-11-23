@@ -1,0 +1,20 @@
+version: '2'
+services:
+  web:
+    hostname: simple-wc
+    image: harrifeng/simple
+    command: /usr/sbin/sshd -D
+    volumes:
+      - root_vol:/root
+    ports:
+      - "2222:22"
+      - "3000:3000"
+      - "4200:4200"
+      - "7000:7000"
+      - "8000:8000"
+      - "8080:8080"
+      - "8888:8888"
+      - "9000:9000"
+volumes:
+  root_vol:
+    external: true
