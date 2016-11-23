@@ -23,10 +23,9 @@ sqlite3 \
 openssh-server
 
 # For nodejs
-RUN curl -sL https://deb.nodesource.com/setup_4.x | bash -
+RUN curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y install nodejs
 RUN npm install -g js-beautify webpack tern
-RUN npm install -g bower ember-cli phantomjs-prebuilt shrinkpack
 
 # For sshd
 RUN mkdir /var/run/sshd
